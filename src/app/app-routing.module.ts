@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'contratame',
     loadChildren: () => import('./views/contratame/contratame.module').then( m => m.ContratamePageModule)
+  },
+  {
+    path: 'listado',
+    loadChildren: () => import('./views/uni/componentes/listado/listado.module').then( m => m.ListadoPageModule)
   }
 ];
 

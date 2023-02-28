@@ -3,5 +3,12 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "plugins": {
+    "SplashScreen": {
+      "backgroundColor": "#FFFFFF",
+      "icon": "resources/img_profile.png"
+    }
+  }
+  
 }

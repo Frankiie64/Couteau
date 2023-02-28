@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content>
-  <div  *ngIf="!list">
+  <div>
     <ion-list>
       <ion-item>
         <ion-label position="stacked">País</ion-label>
@@ -22,11 +22,7 @@
       </ion-item>
     </ion-list>
     <ion-button expand="block" (click)="searchUniversities()">Buscar</ion-button>
-  </div>
-  <div  *ngIf="list">
-    <ion-button expand="block" (click)="volverAtras()" color="danger" >Volver Atras</ion-button>
-    <app-listado-uni [listaUni]="universities"></app-listado-uni>
-  </div>
+  </div>  
 </ion-content>
 
 

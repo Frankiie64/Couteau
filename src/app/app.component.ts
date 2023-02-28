@@ -11,7 +11,7 @@ export class AppComponent {
     { title: 'Edad', url: '/edad', icon: 'hourglass' },
     { title: 'Universidades', url: '/uni', icon: 'people-circle' },
     { title: 'Clima RD', url: '/weather', icon: 'cloud' },
-    { title: 'Contratame', url: '/contratame', icon: 'help-circle' },
+    { title: 'Acerca de', url: '/contratame', icon: 'help-circle' },
 
   ];
   constructor() {}

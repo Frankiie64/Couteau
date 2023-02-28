@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>
+      Universidades
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-button expand="block" (click)="volverAtras()" color="danger" >Volver Atras</ion-button>
+<ng-container *ngIf="hasUni">
+  <ion-card *ngFor="let p of listaUni">
+    <ion-card-header>
+      <ion-card-title>{{ p.name }}</ion-card-title>
+      <ion-card-subtitle>{{ p.domains }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <a href="{{ p.web_pages[0] }}" target="_blank">Visitar sitio web</a>
+    </ion-card-content>
+  </ion-card>
+  </ng-container>
+  <ion-card *ngIf="!hasUni">
+    <ion-card-header>
+      <ion-card-title>Error</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="error-message">
+        <p><ion-icon name="alert-circle-outline" class="error-icon"></ion-icon>
+          No se encontraron resultados.</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+  
+  

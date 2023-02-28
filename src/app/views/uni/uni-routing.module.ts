@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: UniPage
+  },
+  {
+    path: 'listado',
+    loadChildren: () => import('./componentes/listado/listado.module').then( m => m.ListadoPageModule)
   }
 ];
 

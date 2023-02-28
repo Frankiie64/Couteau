@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ListadoUniComponent } from './componentes/listado-uni/listado-uni.component';
+
 
 import { IonicModule } from '@ionic/angular';
 
@@ -16,6 +16,6 @@ import { UniPage } from './uni.page';
     IonicModule,
     UniPageRoutingModule
   ],
-  declarations: [UniPage,ListadoUniComponent  ]
+  declarations: [UniPage ]
 })
 export class UniPageModule {}

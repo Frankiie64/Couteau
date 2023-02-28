@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UniService } from 'src/app/services/serviceUni/uni.service';
+import { NavController, NavParams } from '@ionic/angular';
 
 
 @Component({
@@ -8,22 +9,17 @@ import { UniService } from 'src/app/services/serviceUni/uni.service';
   styleUrls: ['./uni.page.scss'],
 })
 export class UniPage {
-  country: string = '';
-  universities: any = [];
-  list = false;
 
-  constructor(private uniService: UniService) {}
+  country: string = '';
+
+  constructor(private uniService: UniService,public navCtrl: NavController) {}
 
   searchUniversities() {
     this.uniService.searchUniversities(this.country).subscribe((data) => {
-      this.universities = data;
-      this.list = true;
+      console.log(data)
+      this.navCtrl.navigateForward('/listado', { state: { listaUni: data } });
     });
   }
 
-  volverAtras(){
-    this.country = "";
-    this.list = false;
-  }
  
 }
